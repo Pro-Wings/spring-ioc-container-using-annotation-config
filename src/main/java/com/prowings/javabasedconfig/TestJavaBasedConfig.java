@@ -12,11 +12,16 @@ public class TestJavaBasedConfig {
 		
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(MyBeansConfigurations.class);
 
-		Mobile m = ctx.getBean(Mobile.class);
+		Mobile m = ctx.getBean("mobile2",Mobile.class);
 		System.out.println(m);
 		
+		
+		Radio rd = ctx.getBean(Radio.class);
+		System.out.println(rd);
+
 		Television t = ctx.getBean(Television.class);
 		System.out.println(t);
+		
 		System.out.println("main ended!!");
 		
 	}
